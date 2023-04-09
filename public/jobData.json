@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "companyName": "Acme Corp",
+        "companyLogo": "https://example.com/logo1.png",
+        "jobTitle": "Software Engineer",
+        "jobCategory": "Remote",
+        "location": "San Francisco, CA",
+        "timePeriod": "Full-time",
+        "salary": "Competitive",
+        "jobDescription": "We are looking for a skilled software engineer to join our team...",
+        "jobResponsibility": "Responsibilities include developing new features, fixing bugs, and...",
+        "educationalRequirements": "Bachelor's degree in Computer Science or related field",
+        "experiences": "2+ years of experience in software engineering",
+        "contactInformation": {
+            "phone": "555-1234",
+            "email": "jobs@example.com"
+        }
+    },
+    {
+        "id": 2,
+        "companyName": "XYZ Inc",
+        "companyLogo": "https://example.com/logo2.png",
+        "jobTitle": "Product Manager",
+        "jobCategory": "Onsite",
+        "location": "New York, NY",
+        "timePeriod": "Full-time",
+        "salary": "Competitive",
+        "jobDescription": "We are seeking a talented product manager to lead our team in developing...",
+        "jobResponsibility": "Responsibilities include defining product strategy, working with...",
+        "educationalRequirements": "Bachelor's degree in Business or related field",
+        "experiences": "5+ years of experience in product management",
+        "contactInformation": {
+            "phone": "555-5678",
+            "email": "jobs@example.com"
+        }
+    },
+    {
+        "id": 3,
+        "companyName": "ABC Corp",
+        "companyLogo": "https://example.com/logo3.png",
+        "jobTitle": "UI/UX Designer",
+        "jobCategory": "Remote",
+        "location": "Austin, TX",
+        "timePeriod": "Part-time",
+        "salary": "Competitive",
+        "jobDescription": "We are looking for a creative UI/UX designer to join our team...",
+        "jobResponsibility": "Responsibilities include designing user interfaces, creating wireframes...",
+        "educationalRequirements": "Bachelor's degree in Graphic Design or related field",
+        "experiences": "3+ years of experience in UI/UX design",
+        "contactInformation": {
+            "phone": "555-9012",
+            "email": "jobs@example.com"
+        }
+    },
+    {
+        "id": 4,
+        "companyName": "PQR Inc",
+        "companyLogo": "https://example.com/logo4.png",
+        "jobTitle": "Marketing Manager",
+        "jobCategory": "Onsite",
+        "location": "Chicago, IL",
+        "timePeriod": "Full-time",
+        "salary": "Competitive",
+        "jobDescription": "We are seeking an experienced marketing manager to lead our team...",
+        "jobResponsibility": "Responsibilities include developing marketing strategies, managing...",
+        "educationalRequirements": "Bachelor's degree in Marketing or related field",
+        "experiences": "7+ years of experience in marketing",
+        "contactInformation": {
+            "phone": "555-3456",
+            "email": "jobs@example.com"
+        }
+    },
+    {
+        "id": 6,
+        "companyName": "DEF Inc",
+        "companyLogo": "https://example.com/logo6.png",
+        "jobTitle": "Technical Writer",
+        "jobCategory": "Onsite",
+        "location": "Seattle, WA",
+        "timePeriod": "Part-time",
+        "salary": "Competitive",
+        "jobDescription": "We are looking for an experienced technical writer to join our team...",
+        "jobResponsibility": "Responsibilities include creating technical documentation, maintaining...",
+        "educationalRequirements": "Bachelor's degree in English, Technical Writing or related field",
+        "experiences": "5+ years of experience in technical writing",
+        "contactInformation": {
+            "phone": "555-2345",
+            "email": "jobs@example.com"
+        }
+    }
+]
