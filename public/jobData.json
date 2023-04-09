@@ -2,7 +2,7 @@
     {
         "id": 1,
         "companyName": "Acme Corp",
-        "companyLogo": "https://example.com/logo1.png",
+        "companyLogo": "../src/assets/Logo/google-1-1 1-1.png",
         "jobTitle": "Software Engineer",
         "jobCategory": "Remote",
         "location": "San Francisco, CA",
@@ -20,7 +20,7 @@
     {
         "id": 2,
         "companyName": "XYZ Inc",
-        "companyLogo": "https://example.com/logo2.png",
+        "companyLogo": "../src/assets/Logo/netflix-4 1.png",
         "jobTitle": "Product Manager",
         "jobCategory": "Onsite",
         "location": "New York, NY",
@@ -38,7 +38,7 @@
     {
         "id": 3,
         "companyName": "ABC Corp",
-        "companyLogo": "https://example.com/logo3.png",
+        "companyLogo": "../src/assets/Logo/tesla-9 1.png",
         "jobTitle": "UI/UX Designer",
         "jobCategory": "Remote",
         "location": "Austin, TX",
@@ -56,7 +56,7 @@
     {
         "id": 4,
         "companyName": "PQR Inc",
-        "companyLogo": "https://example.com/logo4.png",
+        "companyLogo": "../src/assets/Logo/google-1-1 1-1.png",
         "jobTitle": "Marketing Manager",
         "jobCategory": "Onsite",
         "location": "Chicago, IL",
@@ -72,9 +72,9 @@
         }
     },
     {
-        "id": 6,
+        "id": 5,
         "companyName": "DEF Inc",
-        "companyLogo": "https://example.com/logo6.png",
+        "companyLogo": "../src/assets/Logo/tesla-9 1.png",
         "jobTitle": "Technical Writer",
         "jobCategory": "Onsite",
         "location": "Seattle, WA",
@@ -87,6 +87,24 @@
         "contactInformation": {
             "phone": "555-2345",
             "email": "jobs@example.com"
+        },
+    },
+    {
+        "id": 6,
+        "companyName": "ABC Corporation",
+        "companyLogo": "../src/assets/Logo/google-1-1 1-1.png",
+        "jobTitle": "Marketing Coordinator",
+        "jobCategory": "Remote",
+        "location": "Any",
+        "timePeriod": "Full-time",
+        "salary": "$50,000 - $70,000",
+        "jobDescription": "We are seeking a creative and motivated Marketing Coordinator to join our team...",
+        "jobResponsibility": "Responsibilities include executing marketing campaigns, managing social media accounts, and analyzing...",
+        "educationalRequirements": "Bachelor's degree in Marketing, Communications or related field",
+        "experiences": "2+ years of experience in marketing or related field",
+        "contactInformation": {
+            "phone": "555-1234",
+            "email": "careers@abccorp.com"
         }
     }
 ]
