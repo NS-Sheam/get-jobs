@@ -87,7 +87,7 @@
         "contactInformation": {
             "phone": "555-2345",
             "email": "jobs@example.com"
-        },
+        }
     },
     {
         "id": 6,

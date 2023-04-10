@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-container {
+    @apply px-4 py-16 mx-auto sm: max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20
+}
+
+
+.cart-container {
+    @apply grid gap-8 mb-8 md:grid-cols-2
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.btn-outlined {
+   padding: 10px 20px;
+   background-color: #ffffff;
+   border: 1px solid #9873FF;
+   border-radius: 4px;
+}
