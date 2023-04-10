@@ -5,15 +5,16 @@ import JobDetailApplyCart from '../JobDetailApplyCart/JobDetailApplyCart';
 
 const JobDetails = () => {
     const jobDetail = useLoaderData();
-    const { jobDescription, jobResponsibility, companyLogo, companyName, jobCategory, educationalRequirements, experience } = jobDetail;
+    const { jobDescription, jobResponsibility, companyLogo, companyName, jobCategory, educationalRequirements, experiences } = jobDetail;
+    // console.log(jobDetail);
     return (
         <div>
             <div className='text-4xl font-bold text-center mb-4 header-css pt-4 pb-10'>
                 <h1>Job Details</h1>
             </div>
             <div className='my-container'>
-                <div className='md:flex justify-between'>
-                    <div className='md:w-3/4 mb-5'>
+                <div className='lg:flex justify-between gap-4'>
+                    <div className='w-full lg:w-3/4 mb-5'>
                         <p className='mb-5'>
                             <span className='font-bold'>Job Description: </span>
                             <span>{jobDescription}</span>
@@ -30,7 +31,7 @@ const JobDetails = () => {
                         <p className='md:mb-5'>
                             <span className='font-bold mb-4'>Experiences: </span>
                             <br />
-                            <span>{experience}</span>
+                            <span>{experiences}</span>
                         </p>
                     </div>
                     <JobDetailApplyCart jobDetail={jobDetail} />

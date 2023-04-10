@@ -7,9 +7,11 @@ import addressIcon from "../../assets/Icons/Frame-4.png"
 
 const JobDetailApplyCart = ({ jobDetail }) => {
     const { id, jobTitle,  location, salary, timePeriod, contactInformation } = jobDetail;
-
+    const handleApplyBtn =() =>{
+        console.log(id);
+    }
     return (
-        <div className='md:w-1/3'>
+        <div className='w-1/2 lg:w-1/3 mx-auto'>
             <div className='mb-6 apply-cart p-7 '>
                 <h2 className="textxl font-bold mb-4">Job details</h2>
                 <hr className='border' />
@@ -36,7 +38,7 @@ const JobDetailApplyCart = ({ jobDetail }) => {
                     <p className='font-bold'>Adress: <span className='font-normal'>{location}</span></p>
                 </div>
             </div>
-            <button className='btn-primary w-full rounded-md py-5'>Apply Now</button>
+            <button onClick={handleApplyBtn} className='btn-primary w-full rounded-md py-5'>Apply Now</button>
         </div>
     );
 };
