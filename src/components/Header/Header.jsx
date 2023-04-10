@@ -1,10 +1,11 @@
 import React from 'react';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import { Link } from 'react-router-dom';
+import "./Header.css"
 
 const Header = () => {
     return (
-        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex justify-between items-center'>
+        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex justify-between items-center header-css'>
             <div>
                 <Link to="/">
                     <h1 className='text-3xl font-bold'>getJobs</h1>
