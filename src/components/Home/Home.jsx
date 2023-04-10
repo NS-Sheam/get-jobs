@@ -3,7 +3,7 @@ import Banner from '../Banner/Banner';
 import Catagories from '../Catagories/Catagories';
 import FeatureJobs from '../FeatureJobs/FeatureJobs';
 import { useLoaderData } from 'react-router-dom';
-export const jobDataContext = createContext([])
+export const jobDataContext = createContext([]);
 const Home = () => {
     const jobData = useLoaderData();
     return (

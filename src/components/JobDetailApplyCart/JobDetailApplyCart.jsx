@@ -1,14 +1,48 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import salaryIcon from "../../assets/Icons/Frame.png"
 import jobTitleIcon from "../../assets/Icons/Frame.png"
 import phoneIcon from "../../assets/Icons/Frame-2.png"
 import emailIcon from "../../assets/Icons/Frame-3.png"
 import addressIcon from "../../assets/Icons/Frame-4.png"
+import { addToDb, getjobCart } from '../../utilities/fakeDb';
+import { AppliedJobContext } from '../Layout/Layout';
 
 const JobDetailApplyCart = ({ jobDetail }) => {
-    const { id, jobTitle,  location, salary, timePeriod, contactInformation } = jobDetail;
-    const handleApplyBtn =() =>{
-        console.log(id);
+    const { id, jobTitle, location, salary, timePeriod, contactInformation } = jobDetail;
+    const [appliedJobs, setAppliedJobs] = useContext(AppliedJobContext);
+    const handleApplyBtn = (jobId) => {
+        // addToDb(jobTitle)
+        let prevApplyJob = [];
+        const jobCart = getjobCart();
+        for (const obId in jobCart) {
+            const isAppliedPast = appliedJobs?.find(id => id.contactInformation.phone !== obId);
+            if (!isAppliedPast) {
+                prevApplyJob.push(jobDetail)
+                const newAppliedJobs = [...appliedJobs, jobDetail];
+                setAppliedJobs(newAppliedJobs);
+                addToDb(contactInformation.phone)
+            }
+            else {
+                alert("Already")
+            }
+
+        }
+        
+        // const isAppliedPast = appliedJobs?.find(job => jobId === job.id);
+        // // if (isAppliedPast) {
+        // //     alert("You apply past")
+        // // } else {
+        // //     prevApplyJob.push(jobDetail)
+        // //     const newAppliedJobs = [...appliedJobs, jobDetail];
+        // //     setAppliedJobs(newAppliedJobs);
+        // //     for (const id in jobCart) {
+        // //         if (id === contactInformation.phone) {
+        // //             return;
+        // //         }
+        // //     }
+        //     addToDb(contactInformation.phone)
+        // }
+        console.log(jobCart);
     }
     return (
         <div className='w-1/2 lg:w-1/3 mx-auto'>
@@ -38,7 +72,7 @@ const JobDetailApplyCart = ({ jobDetail }) => {
                     <p className='font-bold'>Adress: <span className='font-normal'>{location}</span></p>
                 </div>
             </div>
-            <button onClick={handleApplyBtn} className='btn-primary w-full rounded-md py-5'>Apply Now</button>
+            <button onClick={() => handleApplyBtn(id)} className='btn-primary w-full rounded-md py-5'>Apply Now</button>
         </div>
     );
 };

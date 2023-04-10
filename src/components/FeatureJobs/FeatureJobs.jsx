@@ -25,9 +25,9 @@ const FeatureJobs = () => {
                 }
             </div>
             <div className='text-center mt-4 mb-4'>
-            <button
-                className={`btn-primary px-5 py-8 ${showMore && "hidden"}`}
-                onClick={() => setShowMore(!showMore)}>See All Jobs</button>
+                <button
+                    className={`btn-primary px-5 py-8 ${showMore && "hidden"}`}
+                    onClick={() => setShowMore(!showMore)}>See All Jobs</button>
             </div>
         </div>
     );

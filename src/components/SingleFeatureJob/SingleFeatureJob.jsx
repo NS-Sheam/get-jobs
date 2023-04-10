@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import locationIcon from "../../assets/Icons/Location Icon.png"
 import salaryIcon from "../../assets/Icons/Frame.png"
 import JobDetails from '../JobDetails/JobDetails';

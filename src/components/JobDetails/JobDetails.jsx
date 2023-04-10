@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./JobDetails.css"
 import { useLoaderData } from 'react-router-dom';
 import JobDetailApplyCart from '../JobDetailApplyCart/JobDetailApplyCart';
+import { AppliedJobContext } from '../Layout/Layout';
 
 const JobDetails = () => {
     const jobDetail = useLoaderData();
     const { jobDescription, jobResponsibility, companyLogo, companyName, jobCategory, educationalRequirements, experiences } = jobDetail;
-    // console.log(jobDetail);
     return (
         <div>
             <div className='text-4xl font-bold text-center mb-4 header-css pt-4 pb-10'>
@@ -34,7 +34,7 @@ const JobDetails = () => {
                             <span>{experiences}</span>
                         </p>
                     </div>
-                    <JobDetailApplyCart jobDetail={jobDetail} />
+                    <JobDetailApplyCart jobDetail={jobDetail}/>
                 </div>
             </div>
         </div>
