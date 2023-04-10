@@ -7,7 +7,7 @@ const SingleFeatureJob = ({ singleFeatureJob }) => {
     console.log(singleFeatureJob);
     return (
         <div>
-            <div className='border p-6 lg:p-10 rounded-md'>
+            <div className='border p-6 lg:p-10 rounded-md h-full'>
                 <img src={companyLogo} alt="" />
                 <h3 className='text-xl font-bold mt-4'>{jobTitle}</h3>
                 <p className='text-slate-600 font-semibold mt-4 mb-4'>{companyName}</p>
@@ -22,10 +22,8 @@ const SingleFeatureJob = ({ singleFeatureJob }) => {
                         <img src={salaryIcon} alt="" />
                         <p>Salary: {salary}</p>
                     </div>
-                    <div>
-
-                    </div>
                 </div>
+                <button className='btn-primary text-xl font-bold px-7 py-4 mt-4'>View Details</button>
             </div>
         </div>
     );

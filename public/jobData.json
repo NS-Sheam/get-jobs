@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "companyName": "Acme Corp",
-        "companyLogo": "../src/assets/Logo/google-1-1 1-1.png",
+        "companyName": "Google LLC",
+        "companyLogo": "https://i.ibb.co/b24WfL1/google-1-1-1.png",
         "jobTitle": "Software Engineer",
         "jobCategory": "Remote",
         "location": "San Francisco, CA",
@@ -19,8 +19,8 @@
     },
     {
         "id": 2,
-        "companyName": "XYZ Inc",
-        "companyLogo": "../src/assets/Logo/netflix-4 1.png",
+        "companyName": "Netflix",
+        "companyLogo": "https://i.ibb.co/Cnst1vt/netflix-4-1.png",
         "jobTitle": "Product Manager",
         "jobCategory": "Onsite",
         "location": "New York, NY",
@@ -37,8 +37,8 @@
     },
     {
         "id": 3,
-        "companyName": "ABC Corp",
-        "companyLogo": "../src/assets/Logo/tesla-9 1.png",
+        "companyName": "Tesla",
+        "companyLogo": "https://i.ibb.co/j814r0B/tesla-9-1.png",
         "jobTitle": "UI/UX Designer",
         "jobCategory": "Remote",
         "location": "Austin, TX",
@@ -55,8 +55,8 @@
     },
     {
         "id": 4,
-        "companyName": "PQR Inc",
-        "companyLogo": "../src/assets/Logo/google-1-1 1-1.png",
+        "companyName": "Air Bnb",
+        "companyLogo": "https://i.ibb.co/G9zMqpR/Group-10021.png",
         "jobTitle": "Marketing Manager",
         "jobCategory": "Onsite",
         "location": "Chicago, IL",
@@ -73,8 +73,8 @@
     },
     {
         "id": 5,
-        "companyName": "DEF Inc",
-        "companyLogo": "../src/assets/Logo/tesla-9 1.png",
+        "companyName": "Make Career",
+        "companyLogo": "https://i.ibb.co/CV6z4vS/Career-Hub.png",
         "jobTitle": "Technical Writer",
         "jobCategory": "Onsite",
         "location": "Seattle, WA",
@@ -92,7 +92,7 @@
     {
         "id": 6,
         "companyName": "ABC Corporation",
-        "companyLogo": "../src/assets/Logo/google-1-1 1-1.png",
+        "companyLogo": "https://i.ibb.co/Cnst1vt/netflix-4-1.png",
         "jobTitle": "Marketing Coordinator",
         "jobCategory": "Remote",
         "location": "Any",
@@ -108,3 +108,6 @@
         }
     }
 ]
+
+
+

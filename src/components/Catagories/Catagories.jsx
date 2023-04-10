@@ -14,7 +14,9 @@ const Catagories = () => {
             <p className='text-center text-slate-600 mb-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className='job-container'>
                 {
-                    catagories.map(catagory => <SingleCatagory key={catagory.categoryName} catagory={catagory}/>)
+                    catagories.map(catagory => <SingleCatagory
+                        key={catagory.categoryName}
+                        catagory={catagory} />)
                 }
             </div>
         </div>

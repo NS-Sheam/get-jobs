@@ -1,21 +1,21 @@
 [
     {
-      "categoryLogo": "../src/assets/Icons/accounts 1.png",
+      "categoryLogo": "https://i.ibb.co/n7GbM1N/accounts-1.png",
       "categoryName": "Account & Finence",
       "jobsAvailable": 50
     },
     {
-      "categoryLogo": "../src/assets/Icons/business 1.png",
+      "categoryLogo": "https://i.ibb.co/N2n3v6p/business-1.png",
       "categoryName": "Creative Design",
       "jobsAvailable": 25
     },
     {
-      "categoryLogo": "../src/assets/Icons/social-media 1.png",
+      "categoryLogo": "https://i.ibb.co/K6L8Jxj/social-media-1.png",
       "categoryName": "Marketing and Sales",
       "jobsAvailable": 40
     },
     {
-      "categoryLogo": "../src/assets/Icons/chip 1.png",
+      "categoryLogo": "https://i.ibb.co/vXsSF2Z/chip-1.png",
       "categoryName": "Engineering Job",
       "jobsAvailable": 30
     }
