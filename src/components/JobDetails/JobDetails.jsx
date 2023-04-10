@@ -1,12 +1,11 @@
 import React from 'react';
 import "./JobDetails.css"
-import salaryIcon from "../../assets/Icons/Frame.png"
-import jobTitleIcon from "../../assets/Icons/Frame.png"
-import phoneIcon from "../../assets/Icons/Frame-2.png"
-import emailIcon from "../../assets/Icons/Frame-3.png"
-import addressIcon from "../../assets/Icons/Frame-4.png"
+import { useLoaderData } from 'react-router-dom';
+import JobDetailApplyCart from '../JobDetailApplyCart/JobDetailApplyCart';
 
 const JobDetails = () => {
+    const jobDetail = useLoaderData();
+    const { jobDescription, jobResponsibility, companyLogo, companyName, jobCategory, educationalRequirements, experience } = jobDetail;
     return (
         <div>
             <div className='text-4xl font-bold text-center mb-4 header-css pt-4 pb-10'>
@@ -17,50 +16,24 @@ const JobDetails = () => {
                     <div className='md:w-3/4 mb-5'>
                         <p className='mb-5'>
                             <span className='font-bold'>Job Description: </span>
+                            <span>{jobDescription}</span>
                         </p>
                         <p className='mb-5'>
                             <span className='font-bold'>Job Responsibility: </span>
+                            <span>{jobResponsibility}</span>
                         </p>
                         <p className='mb-5'>
                             <span className='font-bold mb-4'>Educational Requirements: </span>
                             <br />
-                            <span>lasdfj</span>
+                            <span>{educationalRequirements}</span>
                         </p>
                         <p className='md:mb-5'>
                             <span className='font-bold mb-4'>Experiences: </span>
                             <br />
-                            <span>lasdfj</span>
+                            <span>{experience}</span>
                         </p>
                     </div>
-                    <div className='md:w-1/3'>
-                        <div className='mb-6 apply-cart p-7 '>
-                            <h2 className="textxl font-bold mb-4">Job details</h2>
-                            <hr className='border' />
-                            <div className='mt-2 flex justify-start gap-3 mb-4'>
-                                <img src={salaryIcon} alt="" />
-                                <p className='font-bold'>Salary: <span className='font-normal'>lsadkfj</span></p>
-                            </div>
-                            <div className='mb-8 flex justify-start gap-3'>
-                                <img src={jobTitleIcon} alt="" />
-                                <p className='font-bold'>Job Title: <span className='font-normal'>lsadkfj</span></p>
-                            </div>
-                            <p className='font-bold mb-4 gap-3'>Contact Information: </p>
-                            <hr className='border' />
-                            <div className='mt-2 mb-4 flex justify-start gap-3'>
-                                <img src={phoneIcon} alt="" />
-                                <p className='font-bold'>Phone: <span className='font-normal'>lsadkfj</span></p>
-                            </div>
-                            <div className='mt-2 mb-4 flex justify-start gap-3'>
-                                <img src={emailIcon} alt="" />
-                                <p className='font-bold'>Email: <span className='font-normal'>lsadkfj</span></p>
-                            </div>
-                            <div className='mt-2 mb-4 flex justify-start gap-3'>
-                                <img src={addressIcon} alt="" />
-                                <p className='font-bold'>Adress: <span className='font-normal'>lsadkfj</span></p>
-                            </div>
-                        </div>
-                        <button className='btn-primary w-full rounded-md py-5'>Apply Now</button>
-                    </div>
+                    <JobDetailApplyCart jobDetail={jobDetail} />
                 </div>
             </div>
         </div>

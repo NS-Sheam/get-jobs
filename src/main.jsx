@@ -12,6 +12,7 @@ import Statistics from './components/Statistics/Statistics';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 import Blogs from './components/Blogs/Blogs';
 import JobDetails from './components/JobDetails/JobDetails';
+import { loadSingleJobData } from './utilities/customLoader';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: "job-details/:jobId",
         element: <JobDetails/>,
-        loader: ({params}) => console.log(params)
+        loader: ({params}) => loadSingleJobData(params.jobId)
       },
       {
         path: "statistics",
