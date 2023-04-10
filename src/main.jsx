@@ -14,23 +14,24 @@ import Blogs from './components/Blogs/Blogs';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
+    element: <Layout />,
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />,
+        loader: () => fetch("jobData.json")
       },
       {
         path: "statistics",
-        element: <Statistics/>
+        element: <Statistics />
       },
       {
         path: "applied-jobs",
-        element: <AppliedJobs/>
+        element: <AppliedJobs />
       },
       {
         path: "blogs",
-        element: <Blogs/>
+        element: <Blogs />
       },
     ]
   }
@@ -38,6 +39,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
