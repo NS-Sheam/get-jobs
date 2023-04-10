@@ -1,6 +1,8 @@
 import React from 'react';
 import locationIcon from "../../assets/Icons/Location Icon.png"
-import salaryIcon from "../../assets/Icons/Frame-1.png"
+import salaryIcon from "../../assets/Icons/Frame.png"
+import JobDetails from '../JobDetails/JobDetails';
+import { Link } from 'react-router-dom';
 
 const SingleFeatureJob = ({ singleFeatureJob }) => {
     const { id, jobTitle, companyLogo, companyName, jobCategory, location, salary, timePeriod } = singleFeatureJob;
@@ -23,7 +25,9 @@ const SingleFeatureJob = ({ singleFeatureJob }) => {
                         <p>Salary: {salary}</p>
                     </div>
                 </div>
-                <button className='btn-primary text-xl font-bold px-7 py-4 mt-4'>View Details</button>
+                <Link to={`/job-details:${id}`}>
+                    <button className='btn-primary text-xl font-bold px-7 py-4 mt-4'>View Details</button>
+                </Link>
             </div>
         </div>
     );
