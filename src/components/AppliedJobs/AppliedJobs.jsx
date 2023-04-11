@@ -35,7 +35,7 @@ const AppliedJobs = () => {
                     <div className='inline-flex p-3 bg-[#eeebf4] rounded-md justify-around items-center mb-10 absolute -top-0'>
                         <ul className='font-semibold text-center'>
                             <li onClick={() => setIsFilter(!isFilter)} className='cursor-pointer flex'>
-                                Filte By
+                                Filter By
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-6 h-6 ${isFilter ? "hidden" : "block"}`}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>

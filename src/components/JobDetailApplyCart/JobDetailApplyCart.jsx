@@ -6,24 +6,28 @@ import emailIcon from "../../assets/Icons/Frame-3.png"
 import addressIcon from "../../assets/Icons/Frame-4.png"
 import { addToDb, getjobCart } from '../../utilities/fakeDb';
 import { AppliedJobContext, jobDataContext } from '../Layout/Layout';
+import { toast } from 'react-hot-toast';
 
 const JobDetailApplyCart = ({ jobDetail }) => {
     const { id, jobTitle, location, salary, timePeriod, contactInformation } = jobDetail;
     const [appliedJobs, setAppliedJobs] = useContext(AppliedJobContext);
     const jobData = useContext(jobDataContext);
-    // console.log(jobData);
+    const jobCart = getjobCart();
     const handleApplyBtn = () => {
-        const jobCart = getjobCart();
         let prevApplyJob = [];
         const exists = appliedJobs.find(job => job.contactInformation.phone === contactInformation.phone);
-        if(!exists){
-            prevApplyJob= [...appliedJobs, jobDetail]
+        if (!exists) {
+            prevApplyJob = [...appliedJobs, jobDetail]
         }
-        else{
+        else {
             const remaining = appliedJobs.filter(job => job.contactInformation.phone !== contactInformation.phone);
             prevApplyJob = [...remaining, exists];
         }
-
+        for (const id in jobCart) {
+            if (contactInformation.phone === id) {
+                toast("You already applied this job ✅");
+            }
+        }
         setAppliedJobs(prevApplyJob);
         addToDb(contactInformation.phone);
     }
