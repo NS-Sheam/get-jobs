@@ -3,14 +3,18 @@ import "./JobDetails.css"
 import { useLoaderData } from 'react-router-dom';
 import JobDetailApplyCart from '../JobDetailApplyCart/JobDetailApplyCart';
 import { AppliedJobContext } from '../Layout/Layout';
+import vectoor from "../../assets/All Images/Vector.png"
+import vectoor1 from "../../assets/All Images/Vector-1.png"
 
 const JobDetails = () => {
     const jobDetail = useLoaderData();
     const { jobDescription, jobResponsibility, companyLogo, companyName, jobCategory, educationalRequirements, experiences } = jobDetail;
     return (
         <div>
-            <div className='text-4xl font-bold text-center mb-4 header-css pt-4 pb-10'>
-                <h1>Job Details</h1>
+            <img className='absolute right-0 top-0 w-52 lg:w-fit' src={vectoor1} alt="" />
+            <div className='pb-24 pt-24 header-css relative'>
+                <h1 className='text-xl lg:text-4xl font-bold text-center'>Job Details</h1>
+                <img className='absolute left-0 bottom-0 w-52 lg:w-fit' src={vectoor} alt="" />
             </div>
             <div className='my-container'>
                 <div className='lg:flex justify-between gap-4'>
@@ -34,7 +38,7 @@ const JobDetails = () => {
                             <span>{experiences}</span>
                         </p>
                     </div>
-                    <JobDetailApplyCart jobDetail={jobDetail}/>
+                    <JobDetailApplyCart jobDetail={jobDetail} />
                 </div>
             </div>
         </div>

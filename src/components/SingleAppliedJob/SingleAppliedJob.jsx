@@ -7,7 +7,7 @@ const SingleAppliedJob = ({ job }) => {
     const { id, jobTitle, companyLogo, companyName, jobCategory, location, salary, timePeriod } = job;
     return (
         <div className='flex flex-col lg:flex-row gap-5 justify-between items-center border p-6 lg:p-10 rounded-md mt-5 mb-5'>
-            <div className='w-32 lg:w-56 h-32 lg:h-56 bg-slate-400 flex justify-center items-center rounded-md p-4'>
+            <div className='w-32 lg:w-56 h-32 lg:h-56 bg-slate-200 flex justify-center items-center rounded-md p-4'>
                 <img src={companyLogo} alt="" />
             </div>
             <div>
