@@ -20,4 +20,4 @@ This is a site in which anyone can serch for job. Now I will give the projects m
 - In statistics page there is a chart which created with rechart.
 ## Thats for all. Thank you.
 ---
-## Here is my live site link- https://app.netlify.com/sites/melodious-starlight-c7bbd3/overview
+## Here is my live site link- https://melodious-starlight-c7bbd3.netlify.app/
