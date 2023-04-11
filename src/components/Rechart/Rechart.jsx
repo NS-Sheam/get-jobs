@@ -54,9 +54,9 @@ const data = [
 export default function Rechart() {
   return (
     <div>
-        <h1 className='text-4xl font-bold text-center mb-4'>Featured Jobs</h1>
+        <h1 className='text-xl lg:text-4xl font-bold text-center mb-4 pt-5 pb-6 lg:pb-10 header-css'>My Assignment Marks.</h1>
         <div className="flex justify-center items-center">
-        <AreaChart className="hidden lg:block"
+        <AreaChart className="hidden lg:block mb-8"
       width={1000}
       height={400}
       data={data}
