@@ -1,12 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { AppliedJobContext } from '../Layout/Layout';
+import { useLoaderData } from 'react-router-dom';
+import SingleAppliedJob from '../SingleAppliedJob/SingleAppliedJob';
 
 const AppliedJobs = () => {
     const [isFilter, setIsFilter] = useState(false);
-    const [appliedJob, setAppliedJob] = useContext(AppliedJobContext);
+    const appliedJobsFromLoader = useLoaderData();
     return (
-        <div>
-            <div className='inline-flex p-3 bg-slate-300 rounded-md justify-around items-center'>
+        <div className='p-6 lg:p-10 relative mt-6 my-container'>
+            <div className='flex justify-end'>
+            <div className='inline-flex p-3 bg-slate-300 rounded-md justify-around items-center mb-10 absolute -top-0'>
                 <ul className='font-semibold text-center'>
                     <li onClick={() => setIsFilter(!isFilter)} className='cursor-pointer flex'>
                         Filte By
@@ -25,13 +28,14 @@ const AppliedJobs = () => {
                     <hr className={`${isFilter ? "block" : "hidden"}`} />
                 </ul>
             </div>
-            {/* creating jon cart item  */}
+            </div>
+
             <div>
-                <div>
-                    <img src="" alt="" />
-                </div>
-                <div></div>
-                <div></div>
+                {
+                    appliedJobsFromLoader.map(job => <SingleAppliedJob
+                        key={job.id}
+                        job={job} />)
+                }
             </div>
         </div>
     );

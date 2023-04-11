@@ -14,6 +14,7 @@ import Blogs from './components/Blogs/Blogs';
 import JobDetails from './components/JobDetails/JobDetails';
 import { loadSingleJobData } from './utilities/customLoader';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import appliedJobsLoader from './utilities/appliedJobLoader';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,7 +37,8 @@ const router = createBrowserRouter([
       },
       {
         path: "applied-jobs",
-        element: <AppliedJobs />
+        element: <AppliedJobs />,
+        loader: appliedJobsLoader
       },
       {
         path: "blogs",
