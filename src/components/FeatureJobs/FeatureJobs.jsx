@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { jobDataContext } from '../Home/Home';
 import SingleFeatureJob from '../SingleFeatureJob/SingleFeatureJob';
+import { jobDataContext } from '../Layout/Layout';
 
 const FeatureJobs = () => {
     const [showMore, setShowMore] = useState(false);
-    const jobData = useContext(jobDataContext || [])
+    const jobData = useContext(jobDataContext || []);
     return (
         <div className='my-container'>
             <h1 className='text-4xl font-bold text-center mb-4'>Featured Jobs</h1>

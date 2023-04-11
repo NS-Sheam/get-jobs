@@ -1,48 +1,31 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import salaryIcon from "../../assets/Icons/Frame.png"
 import jobTitleIcon from "../../assets/Icons/Frame.png"
 import phoneIcon from "../../assets/Icons/Frame-2.png"
 import emailIcon from "../../assets/Icons/Frame-3.png"
 import addressIcon from "../../assets/Icons/Frame-4.png"
 import { addToDb, getjobCart } from '../../utilities/fakeDb';
-import { AppliedJobContext } from '../Layout/Layout';
+import { AppliedJobContext, jobDataContext } from '../Layout/Layout';
 
 const JobDetailApplyCart = ({ jobDetail }) => {
     const { id, jobTitle, location, salary, timePeriod, contactInformation } = jobDetail;
     const [appliedJobs, setAppliedJobs] = useContext(AppliedJobContext);
-    const handleApplyBtn = (jobId) => {
-        // addToDb(jobTitle)
-        let prevApplyJob = [];
+    const jobData = useContext(jobDataContext);
+    // console.log(jobData);
+    const handleApplyBtn = () => {
         const jobCart = getjobCart();
-        for (const obId in jobCart) {
-            const isAppliedPast = appliedJobs?.find(id => id.contactInformation.phone !== obId);
-            if (!isAppliedPast) {
-                prevApplyJob.push(jobDetail)
-                const newAppliedJobs = [...appliedJobs, jobDetail];
-                setAppliedJobs(newAppliedJobs);
-                addToDb(contactInformation.phone)
-            }
-            else {
-                alert("Already")
-            }
-
+        let prevApplyJob = [];
+        const exists = appliedJobs.find(job => job.contactInformation.phone === contactInformation.phone);
+        if(!exists){
+            prevApplyJob= [...appliedJobs, jobDetail]
         }
-        
-        // const isAppliedPast = appliedJobs?.find(job => jobId === job.id);
-        // // if (isAppliedPast) {
-        // //     alert("You apply past")
-        // // } else {
-        // //     prevApplyJob.push(jobDetail)
-        // //     const newAppliedJobs = [...appliedJobs, jobDetail];
-        // //     setAppliedJobs(newAppliedJobs);
-        // //     for (const id in jobCart) {
-        // //         if (id === contactInformation.phone) {
-        // //             return;
-        // //         }
-        // //     }
-        //     addToDb(contactInformation.phone)
-        // }
-        console.log(jobCart);
+        else{
+            const remaining = appliedJobs.filter(job => job.contactInformation.phone !== contactInformation.phone);
+            prevApplyJob = [...remaining, exists];
+        }
+
+        setAppliedJobs(prevApplyJob);
+        addToDb(contactInformation.phone);
     }
     return (
         <div className='w-1/2 lg:w-1/3 mx-auto'>

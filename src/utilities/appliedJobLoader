@@ -1,0 +1,20 @@
+import { getjobCart } from "./fakeDb";
+
+
+const appliedJobsLoader = async() => {
+    const loadedJobs = await fetch('/jobData.json');
+    const allJobs = await loadedJobs.json();
+    const savedJobs = [];
+    const jobCart = getjobCart();
+    for (const id in jobCart) {
+        const addedJob = allJobs.find(job => job.contactInformation.phone === id)
+        if(addedJob){
+            // const quantity = jobCart[id];
+            // addedJob.quantity = quantity;
+            savedJobs.push(addedJob);
+        }
+        
+    }
+    return savedJobs;
+}
+export default appliedJobsLoader;

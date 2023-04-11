@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AppliedJobContext } from '../Layout/Layout';
 
 const AppliedJobs = () => {
     const [isFilter, setIsFilter] = useState(false);
+    const [appliedJob, setAppliedJob] = useContext(AppliedJobContext);
     return (
         <div>
             <div className='inline-flex p-3 bg-slate-300 rounded-md justify-around items-center'>
