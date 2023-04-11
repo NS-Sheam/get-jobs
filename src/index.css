@@ -18,6 +18,11 @@
     color: #ffffff;
     font-weight: 700;
     font-size: 20px;
+    transition: all 5s linear;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #9f73f1 0%, #b968eb 100%);
+    
 }
 
 .btn-outlined {
