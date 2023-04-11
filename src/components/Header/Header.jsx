@@ -7,7 +7,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <>
-            <nav className='hidden px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex justify-between items-center header-css'>
+            <nav className='hidden px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:flex justify-between items-center header-css'>
                 <div>
                     <Link to="/">
                         <h1 className='text-[#9873FF] text-3xl font-bold'>getJobs</h1>
@@ -25,11 +25,11 @@ const Header = () => {
 
             {/* Mobile responsive Nabbar part  */}
 
-            <nav className={`w-full mx-auto bg-slate-300 p-4 relative md:hidden z-10`}>
+            <nav className={`w-full mx-auto header-css p-4 relative md:hidden z-10`}>
 
                 {/* Hamburber Menu  */}
 
-                <div className='flex justify-between px-4'>
+                <div className='flex justify-between px-4 mx-auto'>
                     <h2 className='text-[#9873FF] text-2xl font-bold'>getJobs</h2>
                     {
                         isMenuOpen ?
@@ -48,7 +48,7 @@ const Header = () => {
 
 
                 <div className={`font-bold transform duration-500 absolute w-full ${isMenuOpen ? "top-14 right-0" : "-top-96 right-0"}`}>
-                    <ul className="bg-[#e5e1f1] text-center">
+                    <ul className="bg-[#eeebf4] text-center">
                         <li onClick={() => setIsMenuOpen(false)} className='hover:bg-purple-300 duration-200 py-4'>
                             <ActiveLink to="/statistics">Statistics</ActiveLink>
                         </li>

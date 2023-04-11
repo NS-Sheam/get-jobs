@@ -3,9 +3,9 @@ import bannerImage from '../../assets/All Images/P3OLGJ1 copy 1.png';
 
 const Banner = () => {
     return (
-        <section className='header-css md:flex lg:items-end w-full px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mb-10'>
-            <div className='py-4 md:py-8 lg:py-16 md:w-1/2'>
-                <h1 className='text-2xl md:text-4xl lg:text-7xl font-semibold mb-4'>
+        <section className='header-css md:flex lg:items-end w-full px-4 mx-auto md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mb-10'>
+            <div className='py-5 md:py-8 lg:py-16 md:w-1/2 px-5'>
+                <h1 className='text-3xl font-bold md:text-4xl lg:text-7xl lg:font-semibold mb-4'>
                     One Step Closer To Your <p className='text-[#9873FF]'>Dream Job</p>
                 </h1>
                 <p className='lg:text-xl mb-4'>
