@@ -30,7 +30,9 @@ const Header = () => {
                 {/* Hamburber Menu  */}
 
                 <div className='flex justify-between px-4 mx-auto'>
-                    <h2 className='text-[#9873FF] text-2xl font-bold cursor-pointer'>getJobs</h2>
+                    <Link to="/">
+                        <h2 className='text-[#9873FF] text-2xl font-bold cursor-pointer'>getJobs</h2>
+                    </Link>
                     {
                         isMenuOpen ?
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" onClick={() => setIsMenuOpen(!isMenuOpen)}>
