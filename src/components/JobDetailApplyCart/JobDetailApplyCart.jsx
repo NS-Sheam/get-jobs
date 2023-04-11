@@ -28,7 +28,7 @@ const JobDetailApplyCart = ({ jobDetail }) => {
         addToDb(contactInformation.phone);
     }
     return (
-        <div className='w-1/2 lg:w-1/3 mx-auto'>
+        <div className='lg:w-1/3 mx-auto'>
             <div className='mb-6 apply-cart p-7 '>
                 <h2 className="textxl font-bold mb-4">Job details</h2>
                 <hr className='border' />
